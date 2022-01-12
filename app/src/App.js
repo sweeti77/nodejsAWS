@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch(`http://localhost:5000/getjson`)
+    fetch(`http://${process.env.REACT_APP_LINK}:5000/getjson`)
       .then(res => res.json())
       .then(
         (result) => {
